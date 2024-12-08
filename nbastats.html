@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Stats with BALLDONTLIE API</title>
+
+  <!-- Add Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .card-body {
+      background-color: #ffffff;
+      padding: 15px;
+    }
+
+    .card-footer {
+      background-color: #f1f1f1;
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .container-fluid {
+      max-width: 1200px;
+    }
+
+    .header-section {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <div class="header-section">
+    <div class="container text-center">
+      <h1>NBA </h1>
+      <p>Explore NBA teams and players with real-time data from the BALLDONTLIE API</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- NBA Teams Section -->
+      <div class="col-md-6">
+        <h2 class="text-center mb-4">NBA Teams</h2>
+        <div id="teams" class="row">
+          <!-- Teams will be populated here -->
+        </div>
+        <div class="text-center mt-4">
+          <a href="https://www.nba.com/teams" class="btn btn-primary">View All NBA Teams</a>
+        </div>
+      </div>
+
+      <!-- NBA Players Section -->
+      <div class="col-md-6">
+        <h2 class="text-center mb-4">NBA Players</h2>
+        <div id="players" class="row">
+          <!-- Players will be populated here -->
+        </div>
+        <div class="text-center mt-4">
+          <a href="https://www.nba.com/players" class="btn btn-primary">View All NBA Players</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Add Bootstrap and jQuery JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Set your API key here
+    const apiKey = 'e692b72d-ae4c-4bc6-9916-3a52be6eafbd';
+
+    // Fetch and display NBA teams
+    function fetchTeams() {
+      const url = 'https://api.balldontlie.io/v1/teams';
+
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'Authorization': apiKey
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          const teamsContainer = document.getElementById('teams');
+          data.data.forEach(team => {
+            const teamCard = document.createElement('div');
+            teamCard.className = 'col-12 col-md-6 col-lg-4';
+            teamCard.innerHTML = `
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">${team.full_name}</h5>
+                  <p><strong>Conference:</strong> ${team.conference}</p>
+                  <p><strong>Division:</strong> ${team.division}</p>
+                </div>
+              </div>
+            `;
+            teamsContainer.appendChild(teamCard);
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching teams:', error);
+        });
+    }
+
+    // Fetch and display NBA players
+    function fetchPlayers() {
+      const url = 'https://api.balldontlie.io/v1/players';
+
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'Authorization': apiKey
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          const playersContainer = document.getElementById('players');
+          data.data.forEach(player => {
+            const playerCard = document.createElement('div');
+            playerCard.className = 'col-12 col-md-6 col-lg-4';
+            playerCard.innerHTML = `
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">${player.first_name} ${player.last_name}</h5>
+                  <p><strong>Position:</strong> ${player.position}</p>
+                  <p><strong>Team:</strong> ${player.team.full_name}</p>
+                </div>
+              </div>
+            `;
+            playersContainer.appendChild(playerCard);
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching players:', error);
+        });
+    }
+
+    // Initialize fetching of teams and players when the page loads
+    window.onload = function () {
+      fetchTeams();
+      fetchPlayers();
+    };
+  </script>
+
+</body>
+
+</html>

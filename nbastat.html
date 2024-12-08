@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Leagues Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .response {
+      white-space: pre-wrap;
+      background: #f4f4f4;
+      padding: 15px;
+      border: 1px solid #ddd;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>NBA Leagues Data</h1>
+  
+  <!-- Fetch API Response -->
+  <h2>Data from Fetch API</h2>
+  <div id="fetch-response" class="response">Loading...</div>
+
+  <!-- jQuery AJAX Response -->
+  <h2>Data from jQuery AJAX</h2>
+  <div id="ajax-response" class="response">Loading...</div>
+
+  <!-- XMLHttpRequest Response -->
+  <h2>Data from XMLHttpRequest</h2>
+  <div id="xhr-response" class="response">Loading...</div>
+
+  <script>
+    // Fetch API Example
+    var myHeaders = new Headers();
+    myHeaders.append("x-rapidapi-key", "XxXxXxXxXxXxXxXxXxXxXxXx"); // Replace with your actual API key
+    myHeaders.append("x-rapidapi-host", "v2.nba.api-sports.io");
+
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+
+    fetch("https://v2.nba.api-sports.io/leagues", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        document.getElementById('fetch-response').textContent = JSON.stringify(result, null, 2);
+      })
+      .catch(error => {
+        console.log('Error:', error);
+        document.getElementById('fetch-response').textContent = `Error: ${error}`;
+      });
+
+    // jQuery AJAX Example
+    var settings = {
+      "url": "https://v2.nba.api-sports.io/leagues",
+      "method": "GET",
+      "timeout": 0,
+      "headers": {
+        "x-rapidapi-key": "XxXxXxXxXxXxXxXxXxXxXxXx", // Replace with your actual API key
+        "x-rapidapi-host": "v2.nba.api-sports.io"
+      },
+    };
+
+    $.ajax(settings).done(function(response) {
+      document.getElementById('ajax-response').textContent = JSON.stringify(response, null, 2);
+    }).fail(function(error) {
+      console.log('Error:', error);
+      document.getElementById('ajax-response').textContent = `Error: ${error}`;
+    });
+
+    // XMLHttpRequest Example
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function() {
+      if (this.readyState === 4) {
+        var response = JSON.parse(this.responseText);
+        document.getElementById('xhr-response').textContent = JSON.stringify(response, null, 2);
+      }
+    });
+
+    xhr.open("GET", "https://v2.nba.api-sports.io/leagues");
+    xhr.setRequestHeader("x-rapidapi-key", "XxXxXxXxXxXxXxXxXxXxXxXx"); // Replace with your actual API key
+    xhr.setRequestHeader("x-rapidapi-host", "v2.nba.api-sports.io");
+
+    xhr.send();
+  </script>
+
+  <!-- Add jQuery from CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

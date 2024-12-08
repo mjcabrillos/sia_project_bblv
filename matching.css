@@ -1,0 +1,42 @@
+body {
+    text-align: center; 
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: fantasy;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.image {
+    width: 450px;  /* Increased width slightly */
+    height: 350px; /* Increased height slightly */
+    margin-bottom: 30px;  /* Space below the image */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#try-again-button {
+    margin-top: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity */
+    border-radius: 15px;  /* Rounded corners */
+    padding: 35px;  /* More padding for spacious feel */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Larger shadow for depth */
+    margin-bottom: 30px;  /* Space between cards */
+    width: 500px;  /* Wider card */
+}
+
+.image-container {
+    margin-bottom: 30px; /* Space below image container */
+}

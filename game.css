@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url('background.png');
+    color: white;
+    background-size: cover;
+    background-size: cover;
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#word-container {
+    margin-bottom: 20px;
+}
+
+#hint-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+#scrambled-word {
+    margin-top: 10px; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.back-to-home-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-home-container .btn {
+    width: 100%; /* Make the button fill the container width */
+    max-width: 200px; /* Limit the maximum width of the button */
+    margin: 0 auto; /* Center the button horizontally */
+}

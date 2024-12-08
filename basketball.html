@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hoops Trivia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="basketball.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex justify-content-between align-items-center"> 
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div style="font-weight: 900;">
+                Hoops Trivia
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="basketball.html">HOME</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crud.html">CREATE PLAYERS</a>
+                        </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nbastats.html">NBA STATS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nbaplayer.html">QUIZ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-section">TRIVIAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-developers">ABOUT DEVELOPERS</a>
+                    </li>
+                            <li><a class="dropdown-item" href="logIn.php">LOG OUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header class="page-header header container-fluid" style="background-image: url('nbaback.jpg'); background-size: cover;">
+        <div class="overlay"></div>
+        <div class="description" style="font-family: 'Jersey 20', sans-serif;">
+            <h1>Welcome to Hoops Trivia</h1>
+            <p>"Sharpening minds, brightening lives: Hoops Trivia, where NBA passion meets focus and fun"</p>
+        </div>
+    </header>
+
+    <div class="style" style="background-image: url('nbaback.jpg');background-size: cover;">
+        <div class="offer-text">
+            <h2><center>NBA LEGENDS</center></h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center"> <!-- Added 'text-center' class -->
+                    <p class="offer-title">MICHAEL JORDAN</p>
+                    <div class="card">
+                        <img src="mj.png" class="card-img-top" alt="Offer 1">
+                        <div class="card-body">
+                            <p class="card-text">Michael Jordan is a retired professional basketball player widely regarded as one of the greatest athletes in the history of sports. Born on February 17, 1963, in Brooklyn, New York, and raised in Wilmington, North Carolina, Jordan is best known for his exceptional career in the National Basketball Association (NBA).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 text-center"> <!-- Added 'text-center' class -->
+                    <p class="offer-title">KOBE BRYANT</p>
+                    <div class="card">
+                        <img src="kobe.png" class="card-img-top" alt="Offer 2">
+                        <div class="card-body">
+                            <p class="card-text">Kobe Bryant was a legendary professional basketball player, often regarded as one of the greatest to ever play the game. Born on August 23, 1978, in Philadelphia, Pennsylvania, and tragically passing away on January 26, 2020, in a helicopter crash, Kobe left an indelible mark on the world of basketball and beyond.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 text-center"> <!-- Added 'text-center' class -->
+                    <p class="offer-title">LEBRON JAMES</p>
+                    <div class="card">
+                        <img src="lebron.png" class="card-img-top" alt="Offer 3">
+                        <div class="card-body">
+                            <p class="card-text">
+                                LeBron James is a professional basketball player widely regarded as one of the greatest players in NBA history. Born on December 30, 1984, in Akron, Ohio, LeBron is known for his incredible athleticism, versatility, basketball IQ, and longevity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background-image: url(nbaback.jpg);background-size: cover; margin-top: 50px; margin-bottom: 50px;">
+        <div class="accordion-card">
+            <div class="card-body">
+              <h2><center>TRIVIA ABOUT BASKETBALL</center></h2>
+                <div id="about-section" class="accordion" style="background-color: #ffffff00;">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                WHO INVENTED BASKETBALL
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Basketball was invented by Dr. James Naismith, a physical education instructor, in 1891. Naismith developed the game to keep his students active during the winter months at the International YMCA Training School in Springfield, Massachusetts. He wrote down 13 basic rules for the new game and nailed a peach basket onto the elevated track, using a soccer ball as the first basketball. The original game had nine players on each team and no dribbling. The sport quickly gained popularity and spread across the United States and the world, evolving into the fast-paced, competitive game we know today.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                WHO FOUNDED NATIONAL BASKETBALL ASSICIATION (NBA)
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                The NBA was founded on June 6, 1946, by arena owners led by Walter A. Brown and Maurice Podoloff, initially as the Basketball Association of America (BAA). The league was established to provide a professional platform for basketball, with the goal of attracting larger audiences and greater media attention. In 1949, the BAA merged with the National Basketball League (NBL), and the organization officially became the National Basketball Association (NBA). Over time, the NBA grew in prominence, attracting top talent and becoming one of the major professional sports leagues in the world. It has since become a global phenomenon, with teams in the United States, Canada, and players from all over the globe competing at the highest level.                            </div>
+                        </div>
+                    </div>
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            WHO WAS IN THE LOGO ON NBA
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">   
+                    The NBA logo is widely recognized for its iconic silhouette of a player dribbling a basketball. This image is modeled after Jerry West, a Hall of Fame player who spent his entire career with the Los Angeles Lakers. West, known for his sharp skills, agility, and leadership, helped the Lakers win an NBA championship and was named to the All-NBA First Team several times. </div>
+                    </div>
+                 </div>
+                  
+            
+
+
+    <footer style="margin-top: 50px; margin-bottom: 50px;">
+        <h2><center>ABOUT DEVELOPERS</center></h2>
+        <div id="about-developers" class="container-fluid">
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+            <ul class="timeline">
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <img src="jeorge.png" class="card-img bottom" alt="">
+                            <span class="flag">JEORGE ASHLEY M. BUGAAY  </span>
+                            <span class="time-wrapper"><span class="time">Frontend Developer and Backend Developer</span></span>
+                        </div>
+                        <div class="desc"> Working on both the frontend and backend of this project was a challenging yet rewarding journey. Building a visually engaging and user-friendly interface while ensuring seamless data flow and functionality strengthened my skills in full-stack development. From crafting responsive designs to implementing efficient server-side processes, this experience has been invaluable in enhancing my problem-solving abilities and technical expertise.
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="direction-l">
+                        <div class="flag-wrapper">
+                            <img src="mj.jpg" class="card-img-bottom" alt="">
+                            <span class="flag">MARK JOSUA CABRILLOS</span>
+                            <span class="time-wrapper"><span class="time">Frontend Developer</span></span>
+                        </div>
+                        <div class="desc">Working on this Hoops Trivia website has been such an exciting and fulfilling experience. I enjoyed combining my creativity and technical skills to create a platform that showcases the NBA while keeping users engaged through games and fun facts. Designing the navigation bar, cards, and layout using Bootstrap was a great learning process, and I’m proud of how the elements came together to create a smooth and visually appealing experience. </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <img src="carl.png" class="card-img-bottom" alt="">
+                            <span class="flag">CARL LUIS LAYSON</span>
+                            <span class="time-wrapper"><span class="time">API Developer / API Integrator</span></span>
+                        </div>
+                        <div class="desc">Integrating APIs into this project was a rewarding experience that enhanced the app's functionality and connectivity. It was exciting to bridge different systems and ensure smooth data exchange. This process strengthened my skills in API implementation, troubleshooting, and optimizing integrations for seamless performance. It has been a valuable learning journey, and I’m eager to tackle more API-driven projects in the future.
+                        </div>
+                    </div>
+                </li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <img src="ced.jpg" class="card-img-bottom" alt="">
+                        <span class="flag">RON CEDRICK VIDAL</span>
+                        <span class="time-wrapper"><span class="time">Database Developver</span></span>
+                    </div>
+                    <div class="desc">Creating the database for this project was a challenging yet rewarding experience. Designing the structure, relationships, and ensuring data integrity taught me the importance of planning and attention to detail. It was fulfilling to see how the database became the backbone of the application, enabling smooth data flow and functionality. This experience has strengthened my skills in database management and problem-solving, and I’m excited to apply what I’ve learned to future projects.</div>
+                </div>
+            </li>
+            <li>
+            </ul>
+        </div>      
+        <div class="text-center p-3">
+            © 2024 Hoops Trivia, All rights reserved.
+        </div>
+    </footer>
+    <script src="basketball.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
